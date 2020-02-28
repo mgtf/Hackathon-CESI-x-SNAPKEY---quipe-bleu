@@ -1,2 +1,2 @@
-# Hackathon-CESI-x-SNAPKEY-bleue
-Hackathon CESI x SNAPKEY - Équipe bleue
+# Hackathon CESI x SNAPKEY
+## Équipe bleue
