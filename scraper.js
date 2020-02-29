@@ -8,14 +8,17 @@ app.get('/scrape', function(req, res){
 
     url = 'https://www.geolocaux.com/location/bureau/paris-75/paris-1-75001/';
 
-
+  fs.writeFileSync('output.json', "[]", (err) => {
+          if (err) throw err;
+          console.log('crochet1');
+        });
   request(url, function(error, response, html){
     if(!error){
 
 
       var $ = cheerio.load(html);
       var title, price, surface;
-      var data = { title : "", prix : "", surface : "", type : ""};
+      var data = {prix : "", surface : "", typeTransaction : "", typeBien : ""};
      
      
         fs.appendFileSync('output.json', "[", (err) => {
@@ -25,16 +28,33 @@ app.get('/scrape', function(req, res){
 
       $('li.annonce').each(function(i, element){
         var a = $(this).prev();
-        //console.log(a.text());
         var title = $(this).find('.title').text();
         var tprix = $(this).find('.price').text();
         var prix = tprix.replace(/\D/g, "");
         var tsurface = $(this).find('.surface').text()
         var surface = tsurface.replace(/\D/g, "");
-        data.title = title;
+        var typeTransaction = $(this).find('.pri').text();
+        prix = Math.floor((prix/surface)*12);
+        if (title.includes("Bureau")){
+          data.typeBien="Bureau";
+        }
+        else if (title.includes("Local commercial")){
+          data.typeBien="Local commercial";
+        }
+        else if (title.includes("Entrepôt")){
+          data.typeBien="Entrepôt";
+        }
+        else if (title.includes("Fonds de commerce")){
+          data.typeBien="Fonds de commerce";
+        }
+        var cp = title.match(/[0-9]+/); 
+        
+        console.log(cp)
+
         data.prix = prix;
         data.surface = surface;
-        console.log(i);
+        data.typeTransaction = typeTransaction;
+
         fs.appendFileSync('output.json', JSON.stringify(data) + (i == ($('li.annonce').length - 1) ? "" : ","), (err) => {
             if (err) throw err;
             console.log('Data written to file');

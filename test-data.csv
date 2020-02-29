@@ -1,22 +1,22 @@
-title;prix;surface;type
- Location Bureau Paris 1 ;12542;215;
- Location Bureau Paris 1 ;8458;189;
- Location Bureau Paris 1 ;12813;205;
- Location Bureau Paris 1 ;7421;137;
- Location Bureau Paris 1 ;10900;327;
- Location Bureau Paris 1 ;14008;205;
- Location Bureau Paris 1 ;24987;455;
- Location Bureau Paris 1 ;88083;1510;
- Location Bureau Paris 1 ;12542;215;
- Location Bureau Paris 1 ;24960;416;
- Location Bureau Paris 1 ;72694;1051;
- Location Bureau Paris 1 ;29625;450;
- Location Bureau Paris 1 ;12783;236;
- Location Bureau Paris 1 ;25025;455;
- Location Bureau Paris 1 ;15700;314;
- Location Bureau Paris 1 ;5833;155;
- Location Bureau Paris 1 ;8992;166;
- Location Bureau Paris 1 ;1517;28;
- Location Bureau Paris 1 ;9742;167;
- Location Bureau Paris 1 ;1200;20;
- Location Bureau Paris 1 ;9742;167;
+prix;surface;typeTransaction;typeBien
+700;215;;Bureau
+537;189;BAIL CLASSIQUE;Bureau
+750;205;BAIL CLASSIQUE;Bureau
+650;137;BAIL CLASSIQUE;Bureau
+400;327;BAIL CLASSIQUE;Bureau
+819;205;BAIL CLASSIQUE;Bureau
+658;455;BAIL CLASSIQUE;Bureau
+699;1510;;Bureau
+700;215;BAIL CLASSIQUE;Bureau
+720;416;BAIL CLASSIQUE;Bureau
+829;1051;;Bureau
+790;450;BAIL CLASSIQUE;Bureau
+649;236;;Bureau
+660;455;BAIL CLASSIQUE;Bureau
+600;314;;Bureau
+451;155;BAIL CLASSIQUE;Bureau
+650;166;;Bureau
+650;28;BAIL CLASSIQUE;Bureau
+700;167;BAIL CLASSIQUE;Bureau
+720;20;BAIL CLASSIQUE;Bureau
+700;167;;Bureau
